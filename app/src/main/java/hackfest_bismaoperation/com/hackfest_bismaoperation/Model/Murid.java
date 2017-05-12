@@ -14,7 +14,7 @@ public class Murid {
     private String nomorTelepon;
     private String emailMurid;
     private String alamatMurid;
-    private String logitude;
+    private String longitude;
     private String latitude;
     private String username;
     private String password;
@@ -97,12 +97,12 @@ public class Murid {
         this.alamatMurid = alamatMurid;
     }
 
-    public String getLogitude() {
-        return logitude;
+    public String getlongitude() {
+        return longitude;
     }
 
-    public void setLogitude(String logitude) {
-        this.logitude = logitude;
+    public void setlongitude(String longitude) {
+        this.longitude = longitude;
     }
 
     public String getLatitude() {

@@ -17,10 +17,8 @@ import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
-import retrofit.http.GET;
-import retrofit.http.Headers;
 import retrofit.http.POST;
-import retrofit.http.Query;
+
 
 /**
  * Created by Ryan Bagus Susilo on 5/12/2017.
