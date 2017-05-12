@@ -2,10 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hackfest_bismaoperation.com.hackfest_bismaoperation">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/bisma"
@@ -21,7 +24,12 @@
         </activity>
         <activity android:name=".Activity.ListGuruActivity" />
         <activity android:name=".Activity.LoginActivity" />
-        <activity android:name=".Activity.RegisterActivity"></activity>
+        <activity android:name=".Activity.RegisterActivity" />
+        <activity
+            android:name=".Activity.DetilGuruActivity"
+            android:label="@string/title_activity_detil_guru"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Activity.PopUpOrderActivity"></activity>
     </application>
 
 </manifest>

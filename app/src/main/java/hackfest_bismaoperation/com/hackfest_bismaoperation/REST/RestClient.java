@@ -13,12 +13,15 @@ import java.util.Date;
 
 import hackfest_bismaoperation.com.hackfest_bismaoperation.Helper.ToStringConverter;
 import hackfest_bismaoperation.com.hackfest_bismaoperation.Model.APIBaseResponse;
+import hackfest_bismaoperation.com.hackfest_bismaoperation.Model.APIGuruData;
 import hackfest_bismaoperation.com.hackfest_bismaoperation.Model.APIMuridData;
 import retrofit.Call;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
+import retrofit.http.GET;
+import retrofit.http.Headers;
 import retrofit.http.POST;
 
 
@@ -66,8 +69,13 @@ public class RestClient {
         @POST("/api/index.php/Murid/signup")
         Call<APIBaseResponse> signUp(@Field("nama_depan") String nama_depan, @Field("nama_belakang") String nama_belakang, @Field("alamat") String alamat, @Field("tempat_lahir") String tempat_lahir ,
                                               @Field("nomor_telepon")String nomor_telepon, @Field("jenis_kelamin") String jenis_kelamin, @Field(" tanggal_lahir") Date birthDate,
-                                              @Field("status") String status, @Field("email") String email, @Field("username") String username,
+                                              @Field("email") String email, @Field("username") String username,
                                               @Field("password") String password, @Field("longitude") String longitude, @Field("latitude") String latitude);
+
+
+        @Headers("Cache-Control: no-cache")
+        @POST("/api/index.php/Pengajar/show")
+        Call<APIGuruData> showguru();
 
 
     }

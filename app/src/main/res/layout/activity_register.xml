@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    tools:context="hackfest_bismaoperation.com.hackfest_bismaoperation.Activity.RegisterActivity">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#4169E1"
-    >
+    tools:context="hackfest_bismaoperation.com.hackfest_bismaoperation.Activity.RegisterActivity"
+    android:background="#87CEFA">
 
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/view7">
         <EditText android:id="@+id/input_namadepan"
             android:layout_width="match_parent"
@@ -30,7 +26,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="108dp"
+        android:paddingTop="55dp"
         android:id="@+id/view6"
 
         >
@@ -43,7 +39,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="158dp"
+        android:paddingTop="105dp"
         android:id="@+id/view5"
         >
         <EditText android:id="@+id/input_nomortelp"
@@ -57,7 +53,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="208dp"
+        android:paddingTop="155dp"
         android:id="@+id/view4"
         >
         <EditText android:id="@+id/input_alamatmurid"
@@ -70,7 +66,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="258dp"
+        android:paddingTop="205dp"
         android:id="@+id/view2"
         >
         <EditText android:id="@+id/input_tempatlahir"
@@ -83,36 +79,36 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="315dp"
+        android:paddingTop="255dp"
         android:id="@+id/view9"
         >
-    <EditText android:id="@+id/input_tgllahir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tanggal lahir"
-        android:focusable="false"
+        <EditText android:id="@+id/input_tgllahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tanggal lahir"
+            android:focusable="false"
 
-        />
+            />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="418dp"
+        android:paddingTop="355dp"
         android:id="@+id/view3">
         <EditText android:id="@+id/input_emailmurid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email "
-           />
+            />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="468dp"
+        android:paddingTop="405dp"
         >
-        <EditText android:id="@+id/input_username"
+        <EditText android:id="@+id/input_usernameReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
@@ -122,12 +118,13 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="518dp"
+        android:paddingTop="455dp"
         android:id="@+id/view">
-        <EditText android:id="@+id/input_password"
+        <EditText android:id="@+id/input_passwordReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
+            android:inputType="textPassword"
             />
     </android.support.design.widget.TextInputLayout>
 
@@ -138,34 +135,11 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Jenis Kelamin"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="305dp"
         android:id="@+id/textView2"
-         />
 
+        />
 
-
-
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_Simpan"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-
-        android:padding="5dp"
-        android:paddingTop="598dp"
-        android:background="@drawable/buttonshapesimpan"
-        android:text="Simpan"
-
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/view"
-        android:layout_alignParentStart="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="REGISTER"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 
 
 
@@ -173,17 +147,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/radioGroup"
-     >
-
+        >
 
 
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Laki - laki"
+            android:text="Pria"
             android:id="@+id/rbLakilaki"
-            android:layout_marginTop="385dp"
+            android:layout_marginTop="310dp"
             android:layout_marginLeft="140dp"
             android:checked="false"
             />
@@ -193,7 +166,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perempuan"
+            android:text="Wanita"
             android:id="@+id/rbPerempuan"
             android:layout_marginLeft="140dp"
             android:layout_marginTop="10dp"
@@ -204,8 +177,18 @@
 
 
 
-    </RadioGroup>
 
-    <!--</ScrollView>-->
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:id="@+id/buttonSave"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="140dp"
+        android:background="#00FF00"
+
+        />
+
+
 </RelativeLayout>
-</ScrollView>
