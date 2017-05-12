@@ -68,13 +68,13 @@ public class RestClient {
         @FormUrlEncoded
         @POST("/api/index.php/Murid/signup")
         Call<APIBaseResponse> signUp(@Field("nama_depan") String nama_depan, @Field("nama_belakang") String nama_belakang, @Field("alamat") String alamat, @Field("tempat_lahir") String tempat_lahir ,
-                                              @Field("nomor_telepon")String nomor_telepon, @Field("jenis_kelamin") String jenis_kelamin, @Field(" tanggal_lahir") Date birthDate,
+                                              @Field("nomor_telepon")String nomor_telepon, @Field("jenis_kelamin") String jenis_kelamin, @Field(" tanggal_lahir") String birthDate,
                                               @Field("email") String email, @Field("username") String username,
                                               @Field("password") String password, @Field("longitude") String longitude, @Field("latitude") String latitude);
 
 
         @Headers("Cache-Control: no-cache")
-        @POST("/api/index.php/Pengajar/show")
+        @GET("/api/index.php/Pengajar/show")
         Call<APIGuruData> showguru();
 
 

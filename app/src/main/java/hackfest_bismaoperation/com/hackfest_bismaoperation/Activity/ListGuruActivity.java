@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +58,8 @@ public class ListGuruActivity extends AppCompatActivity {
         progressDialog.setMessage("Mengambil Data Guru...");
         progressDialog.show();
 
+
+
         service = RestClient.getClient();
         callGuru = service.showguru();
         callGuru.enqueue(new Callback<APIGuruData>() {
@@ -80,7 +83,6 @@ public class ListGuruActivity extends AppCompatActivity {
                                 adapter.notifyDataSetChanged();
                             }
                         }
-
                         progressDialog.dismiss();
                     }
 

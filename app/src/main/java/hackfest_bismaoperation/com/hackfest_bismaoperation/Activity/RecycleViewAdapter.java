@@ -21,7 +21,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<GuruHolder> {
 
     List<Guru> listGuru;
     private Context context;
-    private String tempjk;
+    private String notlp1,email,tgllahir,tempatlahir,jeniskelamin,namabelakang;
 
 
     public RecycleViewAdapter(Context context, List<Guru> listGuru) {
@@ -36,6 +36,11 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<GuruHolder> {
 
     }
 
+
+
+
+
+
     @Override
     public void onBindViewHolder(GuruHolder holder, int position) {
         final Guru guru = listGuru.get(position);
@@ -44,16 +49,27 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<GuruHolder> {
         mainHolder.tvtit.setText(guru.getNama_depan());
         mainHolder.tvsub.setText(guru.getAlamat());
         mainHolder.tvStatus.setText(guru.getMata_pelajaran());
-        tempjk=guru.getAlamat();
-
+        mainHolder.tv_telpon.setText(guru.getNomor_telepon());
+        mainHolder.tv_email.setText(guru.getEmail());
+        mainHolder.tv_tanggallahir.setText(guru.getTanggal_lahir());
+        mainHolder.tv_tempatlahir.setText(guru.getTempat_lahir());
+        mainHolder.tv_jeniskelamin.setText(guru.getJenis_kelamin());
+        mainHolder.tv_namabelakang.setText(guru.getNama_belakang());
+        namabelakang=guru.getNama_belakang();
         mainHolder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle extras = new Bundle();
                 extras.putString("nama",mainHolder.tvtit.getText().toString());
-                extras.putString("notlp", mainHolder.tvsub.getText().toString());
+                extras.putString("alamat", mainHolder.tvsub.getText().toString());
                 extras.putString("status", mainHolder.tvStatus.getText().toString());
-                //extras.putString("jk", tempjk);
+                extras.putString("nomortlp", mainHolder.tv_telpon.getText().toString());
+               // extras.putString("nomortlp",notlp1);
+                extras.putString("email",email);
+                extras.putString("tanggallahir",mainHolder.tv_tanggallahir.getText().toString());
+                extras.putString("tempatlahir",mainHolder.tv_tempatlahir.getText().toString());
+                extras.putString("jeniskelamin",mainHolder.tv_jeniskelamin.getText().toString());
+                extras.putString("namabelakang",mainHolder.tv_namabelakang.getText().toString());
                 Intent intent = new Intent(context, DetilGuruActivity.class);
                 intent.putExtras(extras);
                 context.startActivity(intent);

@@ -11,11 +11,11 @@ public class Guru {
     private String nama_depan;
     private String nama_belakang;
     private String alamat;
-    private String nomor_telepon;
-    private String jenis_kelamin;
+    private String telepon;
+    private String kelamin;
     private String tempat_lahir;
     private String riwayat_pendidikan;
-    private Date tanggal_lahir;
+    private String tanggal_lahir;
     private String foto_profil;
     private String email;
     private String username;
@@ -57,19 +57,19 @@ public class Guru {
     }
 
     public String getNomor_telepon() {
-        return nomor_telepon;
+        return telepon;
     }
 
     public void setNomor_telepon(String nomor_telepon) {
-        this.nomor_telepon = nomor_telepon;
+        this.telepon = nomor_telepon;
     }
 
     public String getJenis_kelamin() {
-        return jenis_kelamin;
+        return kelamin;
     }
 
     public void setJenis_kelamin(String jenis_kelamin) {
-        this.jenis_kelamin = jenis_kelamin;
+        this.kelamin = jenis_kelamin;
     }
 
     public String getTempat_lahir() {
@@ -88,11 +88,11 @@ public class Guru {
         this.riwayat_pendidikan = riwayat_pendidikan;
     }
 
-    public Date getTanggal_lahir() {
+    public String getTanggal_lahir() {
         return tanggal_lahir;
     }
 
-    public void setTanggal_lahir(Date tanggal_lahir) {
+    public void setTanggal_lahir(String tanggal_lahir) {
         this.tanggal_lahir = tanggal_lahir;
     }
 

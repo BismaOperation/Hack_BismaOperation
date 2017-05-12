@@ -43,7 +43,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private Button btnSave;
     private Call<APIBaseResponse> callSignup;
     private hackfest_bismaoperation.com.hackfest_bismaoperation.REST.RestClient.GitApiInterface service;
-    private static Date birthDateFormat;
+    private static String birthDateFormat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,17 +71,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
-    private Date ConvertToDate(String dateString){
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Date convertedDate = new Date();
-        try {
-            convertedDate = dateFormat.parse(dateString);
-        } catch (ParseException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return convertedDate;
-    }
+
     @Override
     public void onClick(View v) {
 
@@ -99,7 +89,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         @Override
                         public void onDateSet(DatePicker view, int year,
                                               int monthOfYear, int dayOfMonth) {
-                            tgllahir.setText( year + "-" + (monthOfYear + 1) + "-" +dayOfMonth);
+                            tgllahir.setText( dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
                         }
                     }, mYear, mMonth, mDay);
             datePickerDialog.show();
@@ -127,7 +117,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }else if(rbP.isChecked()) {
                 jeniskelaminS= "Wanita";
             }
-            birthDateFormat= ConvertToDate(tgllahir.getText().toString());
+            birthDateFormat= tgllahir.getText().toString();
 
 
 

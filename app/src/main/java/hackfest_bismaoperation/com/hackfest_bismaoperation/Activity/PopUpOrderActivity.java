@@ -31,7 +31,10 @@ public class PopUpOrderActivity extends AppCompatActivity implements View.OnClic
         txtnumber.setOnClickListener(this);
         Intent in=getIntent();
         Bundle b=in.getExtras();
-        txtnumber.setText(b.getString("notlp"));
+        txtnumber.setText(b.getString("nomortlp"));
+
+
+
 
     }
     public void onClick(View v) {

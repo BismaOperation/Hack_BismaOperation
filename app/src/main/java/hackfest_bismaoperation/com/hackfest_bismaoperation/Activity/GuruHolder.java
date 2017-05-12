@@ -5,6 +5,8 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import hackfest_bismaoperation.com.hackfest_bismaoperation.R;
 
 /**
@@ -15,7 +17,12 @@ public class GuruHolder extends RecyclerView.ViewHolder{
     TextView tvsub;
     TextView tvtit;
     TextView tvStatus;
-    String tempalamat;
+    TextView tv_telpon;
+    TextView tv_email;
+    TextView tv_tanggallahir;
+    TextView tv_tempatlahir;
+    TextView tv_jeniskelamin;
+    TextView tv_namabelakang;
     RelativeLayout item;
 
     public GuruHolder(View view)
@@ -24,8 +31,13 @@ public class GuruHolder extends RecyclerView.ViewHolder{
         this.tvsub = (TextView) view.findViewById(R.id.tv_subtitle);
         this.tvtit = (TextView) view.findViewById(R.id.tv_title);
         this.tvStatus=(TextView) view.findViewById(R.id.tv_status);
+        this.tv_telpon=(TextView)view.findViewById(R.id.tv_tlp);
+        this.tv_email=(TextView) view.findViewById(R.id.tv_email);
+        this.tv_tanggallahir=(TextView) view.findViewById(R.id.tv_tanggallahir);
+        this.tv_tempatlahir=(TextView) view.findViewById(R.id.tv_tempatlahir);
+        this.tv_jeniskelamin=(TextView)view.findViewById(R.id.tv_jeniskelamin);
+        this.tv_namabelakang=(TextView) view.findViewById(R.id.tv_namabelakang);
         this.item = (RelativeLayout) view.findViewById(R.id.itemGuru);
-
 
     }
 }
