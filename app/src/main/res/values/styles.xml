@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ProgressDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">#ffffff</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
 </resources>
