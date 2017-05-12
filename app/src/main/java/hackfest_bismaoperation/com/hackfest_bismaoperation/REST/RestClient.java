@@ -9,8 +9,10 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Response;
 
 import java.io.IOException;
+import java.util.Date;
 
 import hackfest_bismaoperation.com.hackfest_bismaoperation.Helper.ToStringConverter;
+import hackfest_bismaoperation.com.hackfest_bismaoperation.Model.APIBaseResponse;
 import hackfest_bismaoperation.com.hackfest_bismaoperation.Model.APIMuridData;
 import retrofit.Call;
 import retrofit.GsonConverterFactory;
@@ -59,6 +61,14 @@ public class RestClient {
         @FormUrlEncoded
         @POST("/api/index.php/Murid/login")
         Call<APIMuridData> login(@Field("username") String username, @Field("password") String password);
+
+        @FormUrlEncoded
+        @POST("/api/index.php/Murid/signup")
+        Call<APIBaseResponse> signUp(@Field("nama_depan") String nama_depan, @Field("nama_belakang") String nama_belakang, @Field("alamat") String alamat, @Field("tempat_lahir") String tempat_lahir ,
+                                              @Field("nomor_telepon")String nomor_telepon, @Field("jenis_kelamin") String jenis_kelamin, @Field(" tanggal_lahir") Date birthDate,
+                                              @Field("status") String status, @Field("email") String email, @Field("username") String username,
+                                              @Field("password") String password, @Field("longitude") String longitude, @Field("latitude") String latitude);
+
 
     }
 }
