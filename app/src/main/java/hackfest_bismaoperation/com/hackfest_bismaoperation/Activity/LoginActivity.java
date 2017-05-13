@@ -89,11 +89,18 @@ public class LoginActivity extends AppCompatActivity {
                     APIMuridData result = response.body();
                     String returnresponse=result.getMessage();
 
+
+
+
                     Log.d("LoginActivity", "response = " + new Gson().toJson(result));
+                    int idMurid=result.getId();
+                    Bundle extras = new Bundle();
+                    extras.putInt("idmurid",idMurid);
                     if (returnresponse.equalsIgnoreCase("Login Berhasil")) {
-                        //   sessions.createLoginSession(result.getMurid().get(0));
-                        Toast.makeText(getBaseContext(), "Login Berhasil sebagai "+username+"Role : Murid", Toast.LENGTH_LONG).show();
+
+                        Toast.makeText(getBaseContext(),idMurid+"  Login Berhasil sebagai "+username+" Role : Murid", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(), ListGuruActivity.class);
+                        intent.putExtras(extras);
                         startActivity(intent);
                         txtusername.setText("");
                         txtpassword.setText("");

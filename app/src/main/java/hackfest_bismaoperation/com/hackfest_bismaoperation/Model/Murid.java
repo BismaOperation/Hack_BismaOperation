@@ -5,7 +5,7 @@ package hackfest_bismaoperation.com.hackfest_bismaoperation.Model;
  */
 public class Murid {
 
-    private Integer id;
+    private Integer id_murid;
     private String namaDepan;
     private String namaBelakang;
     private String tempatLahir;
@@ -24,14 +24,6 @@ public class Murid {
     public Murid(){}
 
 
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getNamaDepan() {
         return namaDepan;
@@ -135,5 +127,13 @@ public class Murid {
 
     public void setFotoProfil(String fotoProfil) {
         this.fotoProfil = fotoProfil;
+    }
+
+    public Integer getId_murid() {
+        return id_murid;
+    }
+
+    public void setId_murid(Integer id_murid) {
+        this.id_murid = id_murid;
     }
 }

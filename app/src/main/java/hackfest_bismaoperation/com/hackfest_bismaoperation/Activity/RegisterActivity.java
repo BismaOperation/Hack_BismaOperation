@@ -96,6 +96,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
         if (v == btnSave) {
+            if (!validate()) {
+
+                return;
+            }
             final ProgressDialog progressDialog = new ProgressDialog(RegisterActivity.this, R.style.ProgressDialog);
             progressDialog.setIndeterminate(true);
             progressDialog.setMessage("Membuat Akun...");
@@ -159,6 +163,79 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
 
 
+    }
+
+
+    public boolean validate() {
+        boolean valid = true;
+
+        String email = emailmurid.getText().toString();
+       // String username=txtinputUsername.getText().toString();
+        String password=passwordreg.getText().toString();
+
+        if (password.isEmpty()) {
+            passwordreg.setError("Password tidak boleh kosong");
+            valid = false;
+        } else {
+            passwordreg.setError(null);
+        }
+
+        if (usernamereg.getText().toString().isEmpty()) {
+            usernamereg.setError("Username tidak boleh kosong");
+            valid = false;
+        } else {
+            usernamereg.setError(null);
+        }
+
+        if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            emailmurid.setError("Email tidak sesuai dengan format");
+            valid = false;
+        } else {
+            emailmurid.setError(null);
+        }
+
+
+
+
+        if (namadepan.getText().toString().isEmpty()) {
+            namadepan.setError("Nama Depan tidak boleh kosong");
+            valid = false;
+        } else {
+            namadepan.setError(null);
+        }
+
+        if (namabelakang.getText().toString().isEmpty()) {
+            namabelakang.setError("Nama Belakang tidak boleh kosong");
+            valid = false;
+        } else {
+            namabelakang.setError(null);
+        }
+
+        if (nomortlp.getText().toString().isEmpty() ) {
+            nomortlp.setError("Nomor Telepon tidak boleh kosong");
+            valid = false;
+        } else {
+            nomortlp.setError(null);
+        }
+        if (!rbL.isChecked()&&!rbP.isChecked()) {
+            rbL.setError("Jenis kelamin tidak boleh kosong");
+            rbP.setError("Jenis kelamin tidak boleh kosong");
+            valid = false;
+        } else {
+            rbL.setError(null);
+            rbP.setError(null);
+        }
+        if (tgllahir.getText().toString().isEmpty()) {
+            tgllahir.hasFocusable();
+            tgllahir.setError("Tanggal lahir tidak boleh kosong");
+            valid = false;
+        } else {
+            tgllahir.setError(null);
+        }
+
+
+
+        return valid;
     }
 
 

@@ -9,7 +9,6 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +31,16 @@ public class ListGuruActivity extends AppCompatActivity {
     private RestClient.GitApiInterface service;
 
     private ArrayList<Guru> GuruItems = new ArrayList<Guru>();
+    private int id;
+    private static int idmurid1;
 
+    public static int getIdmurid1() {
+        return idmurid1;
+    }
+
+    public static void setIdmurid1(int idmurid1) {
+        ListGuruActivity.idmurid1 = idmurid1;
+    }
 
 
     @Override
@@ -47,7 +55,9 @@ public class ListGuruActivity extends AppCompatActivity {
         adapter = new RecycleViewAdapter(ListGuruActivity.this, GuruItems);
         rvView.setAdapter(adapter);
         fetchData();
-
+       // Bundle b=getIntent().getExtras();
+//        id=b.getInt("idmurid");
+//        setIdmurid1(b.getInt("idmurid"));
     }
 
     public void fetchData()

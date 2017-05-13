@@ -15,6 +15,7 @@ import hackfest_bismaoperation.com.hackfest_bismaoperation.Helper.ToStringConver
 import hackfest_bismaoperation.com.hackfest_bismaoperation.Model.APIBaseResponse;
 import hackfest_bismaoperation.com.hackfest_bismaoperation.Model.APIGuruData;
 import hackfest_bismaoperation.com.hackfest_bismaoperation.Model.APIMuridData;
+import hackfest_bismaoperation.com.hackfest_bismaoperation.Model.APIOrderData;
 import retrofit.Call;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
@@ -76,6 +77,10 @@ public class RestClient {
         @Headers("Cache-Control: no-cache")
         @GET("/api/index.php/Pengajar/show")
         Call<APIGuruData> showguru();
+
+        @FormUrlEncoded
+        @POST("/api/index.php/Murid/order")
+        Call<APIOrderData> order(@Field("id_pengajar") int idpengajar, @Field("id_murid") int idmurid);
 
 
     }

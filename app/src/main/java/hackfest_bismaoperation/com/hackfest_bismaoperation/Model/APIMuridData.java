@@ -9,13 +9,24 @@ import java.util.List;
 public class APIMuridData extends APIBaseResponse implements Serializable {
     private List<Murid> murid;
 
+    private int id;
+
 
     public List<Murid> getMurid() {
         return murid;
     }
 
 
+
     public void setMurid(List<Murid> murid) {
         this.murid = murid;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

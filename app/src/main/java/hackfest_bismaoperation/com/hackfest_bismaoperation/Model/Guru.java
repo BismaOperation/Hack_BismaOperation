@@ -1,13 +1,11 @@
 package hackfest_bismaoperation.com.hackfest_bismaoperation.Model;
 
-import java.util.Date;
-
 /**
  * Created by Ryan Bagus Susilo on 5/12/2017.
  */
 public class Guru {
 
-    private int id;
+    private int id_guru;
     private String nama_depan;
     private String nama_belakang;
     private String alamat;
@@ -23,14 +21,9 @@ public class Guru {
     private String longitude;
     private String latitude;
     private String mata_pelajaran;
+    private String harga;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getNama_depan() {
         return nama_depan;
@@ -150,5 +143,21 @@ public class Guru {
 
     public void setMata_pelajaran(String mata_pelajaran) {
         this.mata_pelajaran = mata_pelajaran;
+    }
+
+    public int getId_guru() {
+        return id_guru;
+    }
+
+    public void setId_guru(int id_guru) {
+        this.id_guru = id_guru;
+    }
+
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
     }
 }

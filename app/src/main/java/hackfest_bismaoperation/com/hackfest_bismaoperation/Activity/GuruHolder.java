@@ -14,20 +14,22 @@ import hackfest_bismaoperation.com.hackfest_bismaoperation.R;
  */
 public class GuruHolder extends RecyclerView.ViewHolder{
 
-    TextView tvsub;
-    TextView tvtit;
-    TextView tvStatus;
-    TextView tv_telpon;
-    TextView tv_email;
-    TextView tv_tanggallahir;
-    TextView tv_tempatlahir;
-    TextView tv_jeniskelamin;
-    TextView tv_namabelakang;
+     TextView tvsub,tvid;
+     TextView tvtit;
+     TextView tvStatus;
+     TextView tv_telpon;
+     TextView tv_email;
+     TextView tv_tanggallahir;
+     TextView tv_tempatlahir;
+     TextView tv_jeniskelamin;
+     TextView tv_namabelakang;
+     TextView tv_harga;
     RelativeLayout item;
 
     public GuruHolder(View view)
     {
         super(view);
+        this.tvid = (TextView) view.findViewById(R.id.tv_id);
         this.tvsub = (TextView) view.findViewById(R.id.tv_subtitle);
         this.tvtit = (TextView) view.findViewById(R.id.tv_title);
         this.tvStatus=(TextView) view.findViewById(R.id.tv_status);
@@ -37,6 +39,7 @@ public class GuruHolder extends RecyclerView.ViewHolder{
         this.tv_tempatlahir=(TextView) view.findViewById(R.id.tv_tempatlahir);
         this.tv_jeniskelamin=(TextView)view.findViewById(R.id.tv_jeniskelamin);
         this.tv_namabelakang=(TextView) view.findViewById(R.id.tv_namabelakang);
+        this.tv_harga=(TextView) view.findViewById(R.id.tv_harga);
         this.item = (RelativeLayout) view.findViewById(R.id.itemGuru);
 
     }

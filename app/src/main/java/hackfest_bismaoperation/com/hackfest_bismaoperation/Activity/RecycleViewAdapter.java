@@ -46,6 +46,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<GuruHolder> {
         final Guru guru = listGuru.get(position);
         final GuruHolder mainHolder = holder;
 
+        mainHolder.tvid.setText(String.valueOf(guru.getId_guru()));
         mainHolder.tvtit.setText(guru.getNama_depan());
         mainHolder.tvsub.setText(guru.getAlamat());
         mainHolder.tvStatus.setText(guru.getMata_pelajaran());
@@ -55,17 +56,21 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<GuruHolder> {
         mainHolder.tv_tempatlahir.setText(guru.getTempat_lahir());
         mainHolder.tv_jeniskelamin.setText(guru.getJenis_kelamin());
         mainHolder.tv_namabelakang.setText(guru.getNama_belakang());
+        mainHolder.tv_harga.setText(guru.getHarga());
         namabelakang=guru.getNama_belakang();
+
         mainHolder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle extras = new Bundle();
+                extras.putInt("id",Integer.parseInt(mainHolder.tvid.getText().toString()));
                 extras.putString("nama",mainHolder.tvtit.getText().toString());
                 extras.putString("alamat", mainHolder.tvsub.getText().toString());
                 extras.putString("status", mainHolder.tvStatus.getText().toString());
                 extras.putString("nomortlp", mainHolder.tv_telpon.getText().toString());
+                extras.putString("harga", mainHolder.tv_harga.getText().toString());
                // extras.putString("nomortlp",notlp1);
-                extras.putString("email",email);
+                extras.putString("email",mainHolder.tv_email.getText().toString());
                 extras.putString("tanggallahir",mainHolder.tv_tanggallahir.getText().toString());
                 extras.putString("tempatlahir",mainHolder.tv_tempatlahir.getText().toString());
                 extras.putString("jeniskelamin",mainHolder.tv_jeniskelamin.getText().toString());
